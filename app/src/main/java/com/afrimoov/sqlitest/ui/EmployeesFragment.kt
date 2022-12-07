@@ -68,10 +68,17 @@ class EmployeesFragment : Fragment(), EmployeesAdapter.FooterViewHolder.OnFooter
                     }
                     val apiResponse = it.data
                     viewModel.mItems.addAll(apiResponse.data.filterNot { item -> viewModel.mItems.any { item2 -> item.id == item2.id } })
-                    adapter.addData(viewModel.mItems)
+
+                    val itemsToShow : MutableList<ListItem> = mutableListOf()
+                    itemsToShow.add(ListItem.Header(getString(R.string.employees_header, viewModel.mItems.size, apiResponse.total)))
+                    itemsToShow.addAll(viewModel.mItems)
+
                     if (apiResponse.total > viewModel.mItems.size){
-                        adapter.addItem(item = ListItem.Footer(false))
+                        itemsToShow.add(ListItem.Footer(false))
                     }
+
+                    adapter.addData(itemsToShow)
+
                     loadingView.visibility = GONE
                     recyclerView.visibility = VISIBLE
                 }

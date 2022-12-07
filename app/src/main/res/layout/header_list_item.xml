@@ -7,7 +7,7 @@
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="5dp"
         android:paddingVertical="10dp"
