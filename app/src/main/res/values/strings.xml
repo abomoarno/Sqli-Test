@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Employees List</string>
+
+    <string name="employees_fragment">Employees Fragment</string>
+    <string name="employees_header">%d Employees of %d</string>
+    <string name="error_text">Une erreur s\'est produite !</string>
+
+    <string name="first_name">&lt;b>First Name :&lt;/b> %s</string>
+    <string name="last_name">&lt;b>Last Name :&lt;/b> %s</string>
+    <string name="email">&lt;b>Email :&lt;/b> %s</string>
+    <string name="load_more">Load More Employees</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
